@@ -43,6 +43,8 @@ class Body extends StatelessWidget {
             height: size.height * 0.03,
           ),
           AlreadyHaveAnAccountChecked(
+            questionText: 'Already have an account?',
+            answerText: 'SIGN IN',
             login: false,
             press: () {
               Navigator.of(context).pushReplacementNamed(LoginScreen.routeName);

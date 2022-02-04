@@ -7,9 +7,12 @@ class AlreadyHaveAnAccountChecked extends StatelessWidget {
     Key? key,
     required this.login,
     required this.press,
+    required this.questionText,
+    required this.answerText,
   }) : super(key: key);
   final bool login;
   final press;
+  final String questionText, answerText;
 
   @override
   Widget build(BuildContext context) {
@@ -17,13 +20,13 @@ class AlreadyHaveAnAccountChecked extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text(
-          'Dont have an account?',
+          questionText,
           style: TextStyle(color: kPrimaryColor),
         ),
         GestureDetector(
           onTap: press,
           child: Text(
-            'Sign Up',
+            answerText,
             style: TextStyle(color: kPrimaryColor, fontWeight: FontWeight.bold),
           ),
         ),
